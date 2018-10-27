@@ -1,5 +1,5 @@
 ---
-  - hosts: all
+  - hosts: windows
     tasks:
       - name: do a basic ping pong test
-      - win_ping:
+        win_ping:
