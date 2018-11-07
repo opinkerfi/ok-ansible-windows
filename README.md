@@ -10,7 +10,7 @@
 Á vélinni sem á að stýra með Ansible opnið Windows PowerShell ISE og keyrið eftirfarandi:
 
 ```powershell
-$url = "https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1"
+$url = "https://raw.githubusercontent.com/opinkerfi/ok-ansible-windows/master/powershell_scripts/ConfigureRemotingForAnsible.ps1"
 $file = "$env:temp\ConfigureRemotingForAnsible.ps1"
 
 (New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)
