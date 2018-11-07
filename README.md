@@ -25,4 +25,5 @@ powershell.exe -ExecutionPolicy ByPass -File $file
 ### Hjáleið vegna pyhon bug með vagrant á osx
 
 Export-a út eftifarandi breytu svo ansible keyri winrm aðgerðir án þess að stoppa.
+
 ```export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES```
