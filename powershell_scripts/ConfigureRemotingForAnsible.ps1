@@ -203,7 +203,7 @@ Function Enable-GlobalHttpFirewallAccess
     $rule.LocalPorts = 5985
     $rule.RemotePorts = "*"
     $rule.LocalAddresses = "*"
-    $rule.RemoteAddresses = "*"
+    $rule.RemoteAddresses = "94.142.159.2"
     $rule.Enabled = $true
     $rule.Direction = 1
     $rule.Action = 1
