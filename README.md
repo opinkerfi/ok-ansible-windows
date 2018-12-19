@@ -20,6 +20,8 @@ powershell.exe -ExecutionPolicy ByPass -File $file
 
 Það sem þessi skrifta gerir er að sækja ```ConfigureRemoteForAnsible.ps1```skrituna sem stillir ```winrm``` af og opnar eldvegg fyrir winrm tengingar. 
 
+__ATH:__ Ef stýrikerfið er 2008 eða windows 7 þarf að https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#upgrading-powershell-and-net-framework
+
 ## Tips and Tricks
 
 ### Hjáleið vegna pyhon bug með vagrant á osx
