@@ -27,7 +27,7 @@ __ATH:__ Ef stýrikerfið er 2008 eða windows 7 þarf að uppfæra powershell o
 ### Þróun á ansible módúlum 
 __Sjá:__ https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html
 
-### Hjáleið vegna pyhon bug með vagrant á osx
+### Hjáleið vegna python bug með vagrant á osx
 
 Export-a út eftifarandi breytu svo ansible keyri winrm aðgerðir án þess að stoppa.
 
