@@ -1,0 +1,7 @@
+---
+  - hosts: windows
+    tasks:
+      - name: do a basic ping pong test
+        win_ping:
+    roles:
+      - ansible-adagios-agent-windows
