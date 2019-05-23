@@ -11,5 +11,5 @@
 
       - name: reboot host if required
         win_reboot:
-          reboot_timeout: 2700
+          reboot_timeout: 3600
         when: update_result.reboot_required
