@@ -10,6 +10,10 @@
           state: installed
         register: update_result
 
+      - name: Prenta út update result
+        debug:
+        var: update_result
+                
       - name: reboot host if required
         win_reboot:
           reboot_timeout: 3600
