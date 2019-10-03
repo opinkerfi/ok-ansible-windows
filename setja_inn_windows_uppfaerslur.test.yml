@@ -1,0 +1,16 @@
+---
+  - hosts: windows
+    tasks:
+      - name: install all critical and security updates
+        win_updates:
+          category_names:
+            - CriticalUpdates
+            - SecurityUpdates
+            - DefinitionUpdates
+          state: installed
+        register: update_result
+
+      - name: reboot host if required
+        win_reboot:
+          reboot_timeout: 3600
+        when: update_result.reboot_required
