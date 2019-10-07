@@ -10,9 +10,9 @@
           state: installed
         register: update_result
 
-      - name: Prenta út update result
+      - name: Prenta út update results
         debug:
-        var: update_result
+          var: update_result
                 
       - name: reboot host if required
         win_reboot:
