@@ -1,0 +1,28 @@
+---
+  - hosts: windows
+    tasks:
+      - win_updates:
+          state: searched  # Default gildið er Installed, þarf því að vera searched.
+        register: update_result 
+      - win_reboot:
+         post_reboot_delay: 900
+        when: update_result.reboot_required
+    
+      - name: install all critical and security updates
+        win_updates:
+          category_names:
+            - CriticalUpdates
+            - SecurityUpdates
+            - DefinitionUpdates
+            - Updates
+            # - UpdateRollups
+          state: installed
+        register: update_result
+
+      - name: reboot host if required
+        win_reboot:
+          reboot_timeout: 3600  # setja í 3600 eftir að test hefur verið framkvæmt
+        when: update_result.reboot_required
+
+
+# Playbook sem endurræsir vél ef það eru reboot pending, keyrir síðan inn patchana eftir á og endurræsir ef þarf

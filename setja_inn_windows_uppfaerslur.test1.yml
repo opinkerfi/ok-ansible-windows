@@ -18,6 +18,3 @@
         win_reboot:
           reboot_timeout: 3600
         when: update_result.reboot_required
-
-
-# Taskið sem failar á Ansible.okh.is en virkar á Hyper-V VM vél

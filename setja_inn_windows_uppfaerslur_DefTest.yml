@@ -1,23 +1,19 @@
 ---
   - hosts: windows
     tasks:
+      - win_reboot:
+    
       - name: install all critical and security updates
         win_updates:
           category_names:
             - CriticalUpdates
             - SecurityUpdates
-            - DefinitionUpdates
+            - Updates
+            - UpdateRollups
           state: installed
         register: update_result
 
-      - name: Prenta út update results
-        debug:
-          var: update_result
-                
       - name: reboot host if required
         win_reboot:
-          reboot_timeout: 3600
+          reboot_timeout: 120
         when: update_result.reboot_required
-
-
-# Taskið sem failar á Ansible.okh.is en virkar á Hyper-V VM vél
