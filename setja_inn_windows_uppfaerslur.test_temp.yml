@@ -3,16 +3,14 @@
     tasks:
       - name: install all critical and security updates
         win_updates:
-          category_names:
-            - CriticalUpdates
-            - SecurityUpdates
-            - DefinitionUpdates
-          state: installed
+          state: searched
         register: update_result
 
       - name: Prenta út update results
         debug:
           var: update_result
+
+          # update_result.found_update_count
                 
       - name: reboot host if required
         win_reboot:
