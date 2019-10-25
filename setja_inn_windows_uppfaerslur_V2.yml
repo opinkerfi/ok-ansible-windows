@@ -14,7 +14,7 @@
             - CriticalUpdates
             - SecurityUpdates
             - DefinitionUpdates
-            - Updates
+            # - Updates
             # - UpdateRollups
           state: installed
         register: update_result
