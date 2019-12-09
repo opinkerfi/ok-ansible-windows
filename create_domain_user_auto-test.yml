@@ -8,7 +8,7 @@
   #  state: present
       - name: Create AD User
         win_domain_user:
-         name: "{{ win_user_name }}"
+         name: {{ win_user_name }}
          firstname: "{{ win_user_firstname }}"
          surname: "{{ win_user_surname }}"
          password: "{{ win_user_password }}"
