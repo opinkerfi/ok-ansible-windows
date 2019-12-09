@@ -21,8 +21,8 @@
          #attributes:   
           #displayname: "{{ win_user_firstname.firstname | capitalize }} {{ win_user_surname.surname | capitalize }}" # Blanda saman firstname + surname 
           #displayname: "{{ win_user_displayname }}" ekki í notkun - not for use
-          #mobile: "{{ win_user_mobile | default(omit) }}"
-          #telephonenumber: "{{ win_user_mobile | default(omit) }}" 
-          #title: "{{ win_user_title | default(omit) }}"
+          mobile: "{{ win_user_mobile | default(omit) }}"
+          telephonenumber: "{{ win_user_mobile | default(omit) }}" 
+          title: "{{ win_user_title | default(omit) }}"
          #groups: "{{ win_domain_group_name }}"
          #groups_action: add
