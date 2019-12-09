@@ -6,7 +6,6 @@
   #  name: "{{ win_domain_group_name }}"
   #  scope: "{{ win_domain_group_scope }}"
   #  state: present
-
       - name: Create AD User
         win_domain_user:
          name: "{{ win_user_name }}"
