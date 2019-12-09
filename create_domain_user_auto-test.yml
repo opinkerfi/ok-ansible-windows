@@ -18,7 +18,7 @@
          Description: "{{ win_user_description | default(omit)  }}"
          Enabled: true
          #upn: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
-         #attributes:   
+         attributes:   
           #displayname: "{{ win_user_firstname.firstname | capitalize }} {{ win_user_surname.surname | capitalize }}" # Blanda saman firstname + surname 
           #displayname: "{{ win_user_displayname }}" ekki í notkun - not for use
           mobile: "{{ win_user_mobile | default(omit) }}"
