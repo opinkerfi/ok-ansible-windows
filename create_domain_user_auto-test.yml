@@ -1,6 +1,6 @@
 ---
-#  - hosts: dc
-#    tasks:
+- hosts: dc
+  tasks:
 #- name: Create Windows Domain Group if it does not exists
   #win_domain_group:
   #  name: "{{ win_domain_group_name }}"
