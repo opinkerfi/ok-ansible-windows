@@ -1,1 +1,2 @@
 - src: https://github.com/opinkerfi/adagios-agent-windows.git
+  version: "1.0.0.1"
