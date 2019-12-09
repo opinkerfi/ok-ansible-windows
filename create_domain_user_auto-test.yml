@@ -13,10 +13,10 @@
          surname: "{{ win_user_surname }}"
          password: "{{ win_user_password }}"
          state: present
-         #email: "{{ win_user_email }}" # Skoða með að blanda saman name+@+email - under review
-         #path: "{{ win_user_ou_location }}"
-         #Description: "{{ win_user_description | default(omit)  }}"
-         #Enabled: true
+         email: "{{ win_user_email }}" # Skoða með að blanda saman name+@+email - under review
+         path: "{{ win_user_ou_location }}"
+         Description: "{{ win_user_description | default(omit)  }}"
+         Enabled: true
          #upn: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
          #attributes:   
           #displayname: "{{ win_user_firstname.firstname | capitalize }} {{ win_user_surname.surname | capitalize }}" # Blanda saman firstname + surname 
