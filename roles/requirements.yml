@@ -1,2 +1,3 @@
-- src: https://github.com/opinkerfi/adagios-agent-windows.git
-  version: "1.0.0.1"
+# Commented out due to debugging
+#- src: https://github.com/opinkerfi/adagios-agent-windows.git
+#  version: "1.0.0.1"
