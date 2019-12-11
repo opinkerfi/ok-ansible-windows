@@ -14,6 +14,8 @@
          surname: "{{ win_user_surname }}"
          password: "{{ win_user_password }}"
          state: present
+         - pause:
+             seconds: 5
          email: "{{ win_user_email }}" # Skoða með að blanda saman name+@+email - under review
          path: "{{ win_user_ou_location }}"
          Description: "{{ win_user_description | default(omit)  }}"
