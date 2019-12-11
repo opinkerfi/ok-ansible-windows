@@ -14,7 +14,7 @@
          surname: "{{ win_user_surname }}"
          password: "{{ win_user_password }}"
          state: present
-         email: "{{ win_user_email }}" # Skoða með að blanda saman name+@+email - under review
+         email: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða með að blanda saman name+@+email - under review
          path: "{{ win_user_ou_location }}"
          Description: "{{ win_user_description | default(omit)  }}"
          Enabled: true
