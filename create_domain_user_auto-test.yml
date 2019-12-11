@@ -1,3 +1,4 @@
+  
 ---
   - hosts: dc
     tasks:
@@ -24,5 +25,6 @@
           mobile: "{{ win_user_mobile | default(omit) }}"
           telephonenumber: "{{ win_user_mobile | default(omit) }}" 
           title: "{{ win_user_title | default(omit) }}"
-         #groups: "{{ win_domain_group_name }}"
-         #groups_action: add
+         groups: 
+          - "{{ win_domain_group_name }}"
+         groups_action: add
