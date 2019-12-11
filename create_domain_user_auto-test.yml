@@ -18,13 +18,13 @@
          path: "{{ win_user_ou_location }}"
          Description: "{{ win_user_description | default(omit)  }}"
          Enabled: true
-         #upn: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
+         upn: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
          attributes:   
           #displayname: "{{ win_user_firstname.firstname | capitalize }} {{ win_user_surname.surname | capitalize }}" # Blanda saman firstname + surname 
           #displayname: "{{ win_user_displayname }}" ekki í notkun - not for use
           mobile: "{{ win_user_mobile | default(omit) }}"
           telephonenumber: "{{ win_user_mobile | default(omit) }}" 
           title: "{{ win_user_title | default(omit) }}"
-         groups: 
+         #groups: 
           - "{{ win_domain_group_name }}"
-         groups_action: add
+         #groups_action: add
