@@ -12,7 +12,6 @@
          firstname: "{{ win_user_firstname }}"
          surname: "{{ win_user_surname }}"
          password: "{{ win_user_password }}"
-         state: present
          email: "{{ win_user_email }}" # Skoða með að blanda saman name+@+email - under review
          path: "{{ win_user_ou_location }}"
          Description: "{{ win_user_description | default(omit)  }}"
@@ -24,5 +23,6 @@
           mobile: "{{ win_user_mobile | default(omit) }}"
           telephonenumber: "{{ win_user_mobile | default(omit) }}" 
           title: "{{ win_user_title | default(omit) }}"
+          state: present
          #groups: "{{ win_domain_group_name }}"
          #groups_action: add
