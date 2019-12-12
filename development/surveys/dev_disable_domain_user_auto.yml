@@ -1,3 +1,4 @@
+
 ---
   - hosts: dc
     tasks:
@@ -7,5 +8,5 @@
          state: present
          Description: "{{ win_user_description | default(omit) }}"
          Enabled: false
-        groups: "{{ win_domain_group_name }}"
-        groups_action: replace
+         groups: "{{ win_domain_group_name }}"
+         groups_action: replace
