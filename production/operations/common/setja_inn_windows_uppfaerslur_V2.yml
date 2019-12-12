@@ -5,7 +5,7 @@
           state: searched  # Default gildið er Installed, þarf því að vera searched.
         register: update_result 
       - win_reboot:
-         post_reboot_delay: 900
+          post_reboot_delay: 900
         when: update_result.reboot_required
     
       - name: install all critical and security updates
