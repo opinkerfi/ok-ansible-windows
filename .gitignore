@@ -1,3 +1,4 @@
 *.retry
-*.test.*
-*.tst.*
+*.sandbox.*
+*.sbox.*
+sandbox
