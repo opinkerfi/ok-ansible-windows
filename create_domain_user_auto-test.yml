@@ -16,7 +16,7 @@
          state: present
          email: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða með að blanda saman name+@+email - under review
          path: "{{ win_user_ou_location }}"
-         domain_server: dc-2.dynjandi.ok365.is
+         domain_server: "{{ win_domain_server }}"
          Description: "{{ win_user_description | default(omit)  }}"
          Enabled: true
          upn: "{{ win_user_name + '@' + active_directory_domain }}" # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
