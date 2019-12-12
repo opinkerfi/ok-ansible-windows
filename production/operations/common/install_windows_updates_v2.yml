@@ -1,7 +1,8 @@
 ---
   - hosts: windows
     tasks:
-      - win_updates:
+      - name: check for updates and reboot host if reboot is pending
+        win_updates:
           state: searched  # Default gildið er Installed, þarf því að vera searched.
         register: update_result 
       - win_reboot:
