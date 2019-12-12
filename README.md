@@ -8,32 +8,37 @@ Nöfn eiga að vera lýsandi fyrir það sem playbook-in er að fara að gera og
 Þessi kóðahirsla hefur eftirfarandi strúktúr:
 ```shell
 # Allar playbooks eru með dev_ forskeyti í þrófun.
-development/.
-├── monitoring
-│   └── dev_adagios_agent_install.yml
-├── operations
-│   ├── common
-│   └── ok365
-└── surveys
-    └── dev_create_domain_user_auto_test.yml
-# Allar playbooks eru með test_ forskeyti í prófun.
-test/
-├── monitoring
-│   └── test_adagios_agent_install.yml
-└── operations
-    ├── common
-    │   ├── test_setja_inn_windows_uppfaerslur.yml
-    │   └── test_setja_inn_windows_uppfaerslur_v2.yml
-    └── ok365
-# Allar playbooks eru án forskeytis í raunumhverfi.
-production/
-├── monitoring
-│   └── adagios_agent_install.yml
-└── operations
-    ├── common
-    │   ├── setja_inn_windows_uppfaerslur.yml
-    │   └── setja_inn_windows_uppfaerslur_V2.yml
-    └── ok365
+.
+├── README.md
+├── development
+│   ├── monitoring
+│   ├── operations
+│   │   ├── common
+│   │   └── ok365
+│   └── surveys
+│       ├── dev_create_domain_user_auto_test.yml
+│       └── dev_survey_create_domain_user.yml
+│
+├── production
+│   ├── monitoring
+│   │   └── install_adagios_agent.yml
+│   ├── operations
+│   │   ├── common
+│   │   │   ├── install_windows_updates.yml
+│   │   │   └── install_windows_updates_v2.yml
+│   │   └── ok365
+│   └── surveys
+│       └── survey_create_domain_user.yml
+├── sandbox
+│   ├── ansible.cfg
+│   ├── hosts
+│   ├── inventory
+│   └── krb5.conf
+└── test
+    ├── monitoring
+    └── operations
+        ├── common
+        └── ok365
 ```
 
 ## Undirbúningur á windows vél
