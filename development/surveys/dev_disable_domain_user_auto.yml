@@ -1,0 +1,11 @@
+---
+  - hosts: dc
+    tasks:
+      - name: disable AD User
+        win_domain_user:
+         name: "{{ win_user_name }}"
+         state: present
+         Description: "{{ win_user_description | default(omit) }}"
+         Enabled: false
+        groups: "{{ win_domain_group_name }}"
+        groups_action: replace
