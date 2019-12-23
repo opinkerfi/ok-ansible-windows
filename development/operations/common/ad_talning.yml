@@ -1,0 +1,5 @@
+---
+  - hosts: PV-DC01.vernd.lan
+    tasks:
+      - name: Tekur saman virka notendur og vélar í AD og sendir á bókhaldið
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/Senda-skyrslu_test.ps1
