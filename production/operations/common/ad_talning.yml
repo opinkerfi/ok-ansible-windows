@@ -1,5 +1,5 @@
 ---
   - hosts: dc
     tasks:
-      - name: Tekur saman virka notendur og vélar í AD og sendir á bókhaldið
+      - name: Collect Users and Computers AD objects which have logged on in the recent 30 days and sends results to accounting.
         win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/Senda-skyrslu.ps1
