@@ -3,7 +3,7 @@
     tasks:
       - name: Test book to copy Powershell script to server and run it.
         win_copy: 
-            src: opinkerfi/ok-ansible-windows/powershell_scripts/dev/ps_test_ahh.ps1
+            src: ps_test_ahh.ps1
             dest: 'C:\temp\'
             remote_src: no
       - name:
