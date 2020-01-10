@@ -3,8 +3,8 @@
     tasks:
       - name: Test book to copy Powershell script to server and run it.
         win_copy: 
-          src: powershell_scripts/dev/ps_test_ahh.ps1
-          dest: 'C:\temp\'
-          remote_src: no
+            src: powershell_scripts/dev/ps_test_ahh.ps1
+            dest: 'C:\temp\'
+            remote_src: no
       - name:
         win_command: powershell.exe -ExecutionPolicy ByPass -File C:/temp/ps_test_ahh.ps1
