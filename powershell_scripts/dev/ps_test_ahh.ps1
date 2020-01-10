@@ -1,0 +1,1 @@
+﻿New-Item -Path c:\ -Name test_ahh -ItemType directory -Force

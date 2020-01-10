@@ -1,9 +1,0 @@
----
-  - hosts: dc
-    tasks:
-      - name: Collect Users and Computers AD objects which have logged on in the recent 30 days and sends results to accounting.
-        win_copy: 
-          src: powershell_scripts/dev/ps_test_ahh.ps1
-          dest: 'C:\temp\'
-          remote_src: no
-        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/temp/ps_test_ahh.ps1
