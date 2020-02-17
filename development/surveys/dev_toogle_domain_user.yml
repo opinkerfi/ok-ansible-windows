@@ -1,7 +1,7 @@
 ---
   - hosts: dc
     tasks:
-      - name: disable AD User
+      - name: Enable or Disable {{ win_user_name }} based on survey input
         win_domain_user:
           name: "{{ win_user_name }}"
           state: present
