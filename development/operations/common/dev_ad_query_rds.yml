@@ -1,5 +1,5 @@
 ---
   - hosts: dc2
     tasks:
-      - name: Collect Users and Computers AD objects which have logged on in the recent 30 days and sends results to accounting.
-        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/Senda-skyrslu_test.ps1
+      - name: Collect Users and Computers AD Groups.
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/QueryAD_AllowRDS.ps1
