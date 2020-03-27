@@ -3,7 +3,7 @@
     tasks:
 
       - name: Sending report to email {{email}} to User
-        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/QueryAD_AllowRDS.ps1 -email {{email}}
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/Query-ar_AD_Groups_main.ps1 -email {{email}}
 
 #        - name: Collect Users and Computers AD Groups.
 #        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/QueryAD_AllowRDS.ps1
