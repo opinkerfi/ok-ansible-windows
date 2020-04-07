@@ -1,0 +1,9 @@
+---
+  - hosts: sysvik
+    tasks:
+
+      - name: Install Sysvik on server
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/sysvik_install.ps1 -customer {{customer}}
+
+#        - name: Collect Users and Computers AD Groups.
+#        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/QueryAD_AllowRDS.ps1
