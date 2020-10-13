@@ -12,7 +12,7 @@
           description: "{{ win_user_description | default(omit)  }}"
           mobile: "{{ win_user_mobile | default(omit) }}"
           #telephonenumber: "{{ win_user_mobile | default(omit) }}" 
-          title: "{{ win_user_title | default(omit) }}"
+          title: "{{ win_user_title | default(omit) }}" 
           enabled: true
           # Skoða betur með active directory domain
           # Bæta við í survey eins og hin bara með fast field - under review
