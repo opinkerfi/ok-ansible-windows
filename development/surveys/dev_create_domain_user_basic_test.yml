@@ -21,4 +21,4 @@
           #path: "{{ win_user_ou_location }}"
           #attributes:   
           #groups: "{{ win_domain_group_name }}"
-          #groups_action: add
+          #groups_action: add 
