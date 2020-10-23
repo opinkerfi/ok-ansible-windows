@@ -1,5 +1,5 @@
 ---
-  - hosts: dc
+  - hosts: dctest
     tasks:
       - name: Restart a service
         win_service:
