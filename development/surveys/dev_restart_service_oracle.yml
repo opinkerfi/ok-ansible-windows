@@ -1,5 +1,5 @@
 ---
-  - hosts: dctest
+  - hosts: oracle
     tasks:
       - name: Restart a service
         win_service:
