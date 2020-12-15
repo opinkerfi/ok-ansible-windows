@@ -1,0 +1,7 @@
+---
+  - hosts: dctest
+    tasks:
+      - name: Restart a service
+        win_service:
+          name: "{{ win_service }}"
+          state: restarted
