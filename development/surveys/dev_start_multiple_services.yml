@@ -3,7 +3,7 @@
     tasks:
       - name: Restart a service
         win_service:
-          name: "{{ win_service2 }}"
+          name: "{{ win_service1 }}"
           state: started
       - name: Restart a service
         win_service:
