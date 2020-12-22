@@ -1,0 +1,11 @@
+---
+  - hosts: "{{ win_host }}"
+    tasks:
+      - name: Restart a service
+        win_service:
+          name: "{{ win_service2 }}"
+          state: started
+      - name: Restart a service
+        win_service:
+          name: "{{ win_service2 }}"
+          state: started
