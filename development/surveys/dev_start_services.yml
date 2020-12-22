@@ -1,5 +1,5 @@
 ---
-  - hosts: {{ win_host }}
+  - hosts: "{{ win_host }}"
     tasks:
       - name: Restart a service
         win_service:
