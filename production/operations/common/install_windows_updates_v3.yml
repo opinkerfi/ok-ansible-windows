@@ -16,7 +16,7 @@
             - SecurityUpdates
             - DefinitionUpdates
             - UpdateRollups
-            # - Updates
+            - Updates
           state: installed
         register: update_result
 
