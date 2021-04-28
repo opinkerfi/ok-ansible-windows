@@ -16,7 +16,8 @@
           # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
           upn: "{{ win_user_name + '@' + active_directory_domain }}"
           attributes:   
-            telephone: "{{ win_user_mobile | default(omit) }}"
+            mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
+            displayname: "{{ win_user_displayname | default(omit)}}
           groups: "{{ win_domain_group_name }}"
           groups_action: add
