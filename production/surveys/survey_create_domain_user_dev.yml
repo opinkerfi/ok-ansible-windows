@@ -3,7 +3,7 @@
     tasks:
       - name: Create AD User {{ win_user_name }}
         win_domain_user:
-          name: "{{ win_user_fullname }}"
+          name: "{{ win_user_name }}"
           username: "{{ win_user_samaccountname | default(omit) }}"
           firstname: "{{ win_user_firstname }}"
           surname: "{{ win_user_surname }}"
