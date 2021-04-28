@@ -3,12 +3,10 @@
     tasks:
       - name: Create AD User {{ win_user_name }}
         win_domain_user:
-          identity: "{{ win_user_sAMAccountName }}"
+          name: "{{ win_user_name }}"
           firstname: "{{ win_user_firstname }}"
           surname: "{{ win_user_surname }}"
           password: "{{ win_user_password }}"
-          name: "{{ win_user_name }}"
-          #name: "{{ win_user_firstname + ' ' + win_user_surname }}"
           state: present
           # Skoða með að blanda saman name+@+email - under review
           email: "{{ win_user_name + '@' + active_directory_domain }}"
