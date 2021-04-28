@@ -14,14 +14,14 @@
           email: "{{ win_user_sAMAccountName + '@' + active_directory_domain }}"
           path: "{{ win_user_ou_location }}"
           Description: "{{ win_user_description | default(omit)  }}"
+          #Þessu bætt við
+          sAMAccountName: "{{ win_user_sAMAccountName }}"
           Enabled: true
           # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
           attributes:   
             mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
             #displayName: "{{ win_user_firstname + ' ' + win_user_surname}}"
-            #Þessu bætt við
-            sAMAccountName: "{{ win_user_sAMAccountName }}"
           groups: "{{ win_domain_group_name }}"
           groups_action: add
 
