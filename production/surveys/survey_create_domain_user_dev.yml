@@ -1,10 +1,9 @@
 ---
   - hosts: dc
     tasks:
-      - name: Create AD User {{ win_user_sAMAccountName }}
+      - name: Create AD User {{ win_user_name }}
         win_domain_user:
-          identity: "{{ win_user_sAMAccountName }}"
-          name: "{{ win_user_firstname + ' ' + win_user_surname }}"
+          name: "{{ win_user_name }}"
           firstname: "{{ win_user_firstname }}"
           surname: "{{ win_user_surname }}"
           password: "{{ win_user_password }}"
@@ -19,5 +18,6 @@
           attributes:   
             mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
+            displayName: "{{ win_user_firstname + ' ' + win_user_surname}}"
           groups: "{{ win_domain_group_name }}"
           groups_action: add
