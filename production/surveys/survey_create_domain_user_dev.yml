@@ -15,7 +15,9 @@
           Description: "{{ win_user_description | default(omit)  }}"
           Enabled: true
           # Skoða betur með active directory domain - Bæta við í survey eins og hin bara með fast field - under review
-          upn: "{{ win_user_sAMAccountName + '@' + active_directory_domain }}"
+          #upn: "{{ win_user_sAMAccountName + '@' + active_directory_domain }}"
+          #Virkaði fyrir ofan, en bætt við þessari línu fyrir neðan
+          upn: "{{ active_directory_domain + win_user_sAMAccountName }}"
           attributes:   
             mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
