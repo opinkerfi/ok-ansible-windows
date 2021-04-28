@@ -3,10 +3,11 @@
     tasks:
       - name: Create AD User {{ win_user_name }}
         win_domain_user:
-          name: "{{ win_user_name }}"
+          identity: "{{ win_user_identity }}"
           firstname: "{{ win_user_firstname }}"
           surname: "{{ win_user_surname }}"
           password: "{{ win_user_password }}"
+          name: "{{ win_user_firstname + ' ' + win_user_surname }}"
           state: present
           # Skoða með að blanda saman name+@+email - under review
           email: "{{ win_user_name + '@' + active_directory_domain }}"
@@ -18,6 +19,6 @@
           attributes:   
             mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
-            displayName: "{{ win_user_firstname + ' ' + win_user_surname }}"
+            #displayName: "{{ win_user_firstname + ' ' + win_user_surname }}"
           groups: "{{ win_domain_group_name }}"
           groups_action: add
