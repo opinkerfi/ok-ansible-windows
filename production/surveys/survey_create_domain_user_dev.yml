@@ -21,7 +21,7 @@
             title: "{{ win_user_title | default(omit) }}"
             #displayName: "{{ win_user_firstname + ' ' + win_user_surname}}"
             #Þessu bætt við
-            sAMAccountName: "{{ win_user_sAMAccountname }}"
+            sAMAccountName: "{{ win_user_sAMAccountName }}"
           groups: "{{ win_domain_group_name }}"
           groups_action: add
 
