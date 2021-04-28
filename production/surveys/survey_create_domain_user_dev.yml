@@ -19,7 +19,7 @@
           attributes:   
             mobile: "{{ win_user_mobile | default(omit) }}"
             title: "{{ win_user_title | default(omit) }}"
-            displayName: "{{ win_user_firstname + ' ' + win_user_surname}}"
+            #displayName: "{{ win_user_firstname + ' ' + win_user_surname}}"
           groups: "{{ win_domain_group_name }}"
           groups_action: add
 
