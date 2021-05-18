@@ -1,0 +1,12 @@
+---
+  - hosts: "{{ win_host }}"
+    tasks:
+      - name: Stop process Sysvik
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/sysvik_restart.ps1 -process {{process}}
+
+#        - name: Collect Users and Computers AD Groups.
+#        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/QueryAD_AllowRDS.ps1
+      - name: Restart a service
+        win_service:
+          name: "{{ win_service }}"
+          state: started
