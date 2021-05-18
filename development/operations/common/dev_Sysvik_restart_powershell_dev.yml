@@ -1,0 +1,8 @@
+---
+  - hosts: "{{ win_host }}"
+    tasks:
+      - name: Test book to copy Powershell script to server and run it.
+        win_copy: 
+            src: ps_test_ahh.ps1
+            dest: 'C:\scripts\'
+            remote_src: no
