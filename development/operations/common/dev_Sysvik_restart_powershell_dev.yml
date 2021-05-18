@@ -6,7 +6,7 @@
             src: sysvik_restart.ps1
             dest: 'C:\scripts\'
             remote_src: no
-     - name: Stop process Sysvik
+      - name: Stop process Sysvik
         win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/sysvik_restart.ps1 -process {{process}}
 
 #        - name: Collect Users and Computers AD Groups.
