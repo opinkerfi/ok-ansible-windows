@@ -1,5 +1,5 @@
 ---
-  - hosts: dctest
+  - hosts: "{{ win_host }}"
     tasks:
       - name: Restart a service
         win_service:
