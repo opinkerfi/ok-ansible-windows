@@ -2,4 +2,4 @@
   - hosts: dc
     tasks:
       - name: Create user in Active Directory and add to Sec groups
-        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/create_user_ansible_powershell.ps1 -name {{name}} -password {{password}} -givenname {{givenname}} -surname {{surname}} -samaccountname {{samaccountname}} -displayname {{displayname}} -path {{path}} -title {{title}}
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/create_user_ansible_powershell.ps1 -password {{password}} -givenname {{givenname}} -surname {{surname}} -samaccountname {{samaccountname}} -displayname {{displayname}} -path {{path}} -title {{title}}
