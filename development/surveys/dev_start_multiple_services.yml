@@ -7,6 +7,5 @@
           state: started
       - name: Restart a service
         win_service:
-          name: "{{ win_service2 }}"
+          name: "{{ win_service2 | omit }}"
           state: started
-        when: win_service2
