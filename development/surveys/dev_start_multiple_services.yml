@@ -9,3 +9,4 @@
         win_service:
           name: "{{ win_service2 }}"
           state: started
+        when: win_service2 is defined
