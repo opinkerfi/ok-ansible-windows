@@ -1,5 +1,5 @@
 ---
-  - hosts: windows1
+  - hosts: windowslocal
     tasks:
       - name: check for updates and reboot host if reboot is pending
         win_updates:
