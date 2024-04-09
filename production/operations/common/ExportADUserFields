@@ -1,0 +1,5 @@
+---
+  - hosts: dc
+    tasks:
+      - name: Collect Users and Computers AD objects which have logged on in the recent 30 days and sends results to accounting.
+        win_command: powershell.exe -ExecutionPolicy ByPass -File C:/scripts/ExportADUsersDescriptionInfoGroupMembership.ps1
